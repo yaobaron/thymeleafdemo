@@ -42,13 +42,13 @@
     </tr>
     </thead>
     <tbody>
-            <tr th:each="user:${users}">
-                <td class="code" scope="row" th:text="${user.userId}">1</td>
-                <td class="username" th:text="${user.username}">默认姓名</td>
-                <td class="address" th:text="${user.address}">默认地址</td>
-                <td class="link"><a th:href="@{/user/detail(userId=${user.userId})}" target="_blank">查看详情</a></td>
-                <td class="link"><a th:href="@{/user/{userId}(userId=${user.userId})}" target="_blank">查看详情</a></td>
-            </tr>
+    <tr th:each="user:${users}">
+        <td class="code" scope="row" th:text="${user.userId}">1</td>
+        <td class="username" th:text="${user.username}">默认姓名</td>
+        <td class="address" th:text="${user.address}">默认地址</td>
+        <td class="link"><a th:href="@{../user/detail(userId=${user.userId})}" target="_blank">查看详情</a></td>
+        <td class="link"><a th:href="@{../user/{userId}(userId=${user.userId})}" target="_blank">查看详情</a></td>
+    </tr>
     </tbody>
 </table>
 </body>
